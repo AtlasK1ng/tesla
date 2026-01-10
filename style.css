@@ -1,10 +1,12 @@
 :root {
-  --bg: #0f0f0f;
-  --card: #1a1a1a;
-  --text: #f5f5f5;
-  --muted: #b3b3b3;
-  --accent: #ffd400;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
 }
+
 
 * {
   box-sizing: border-box;
@@ -13,10 +15,11 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(180deg, #eef3fb 0%, #f9fbff 100%);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
 
 /* HERO */
 .hero {
@@ -66,10 +69,12 @@ body {
 
 .card {
   background: var(--card);
-  border-radius: 16px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
+
 
 /* GALERÍA */
 .gallery {
@@ -171,3 +176,49 @@ footer {
   font-size: 0.9rem;
   padding-bottom: 2rem;
 }
+.price-inline span {
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.spec-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.spec-grid li {
+  background: var(--accent-soft);
+  border-radius: 14px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.spec-grid span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.spec-grid strong {
+  font-size: 0.95rem;
+}
+
+.price-box {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+}
+
+.price-box span {
+  color: rgba(255,255,255,0.85);
+}
+
+.price-box strong {
+  font-size: 1.1rem;
+}
+
