@@ -25,8 +25,3 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Form (placeholder)
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  alert('Formulario pendiente de activar.');
-});

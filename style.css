@@ -1,72 +1,65 @@
+/* ======================
+   VARIABLES DE COLOR
+====================== */
 :root {
   --bg: #f4f7fb;
   --card: #ffffff;
   --text: #1f2933;
   --muted: #6b7280;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
+  --accent: #2563eb;       /* Azul principal */
+  --accent-soft: #dbeafe;  /* Azul claro */
 }
 
-
+/* ======================
+   RESET / BASE
+====================== */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: linear-gradient(180deg, #eef3fb 0%, #f9fbff 100%);
   color: var(--text);
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
-/* HERO */
+/* ======================
+   HERO
+====================== */
 .hero {
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 2rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
 }
 
-.subtitle {
+.hero-sub {
   color: var(--muted);
   font-size: 1rem;
 }
 
-/* PRECIO */
-.price-badge {
-  margin: 1.5rem auto 0;
-  display: inline-block;
-  background: #2a2a2a;
-  border-radius: 14px;
-  padding: 0.75rem 1.25rem;
-  animation: pulse 2.5s infinite;
-}
-
-.price-badge .label {
-  display: block;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.price-badge .price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-/* CONTENIDO */
+/* ======================
+   CONTENEDOR
+====================== */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* ======================
+   TARJETAS
+====================== */
 .card {
   background: var(--card);
   border-radius: 20px;
@@ -75,113 +68,28 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-
-/* GALERÍA */
-.gallery {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.gallery img {
-  height: 220px;
-  border-radius: 12px;
-  cursor: pointer;
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* FORM */
-form {
-  display: grid;
-  gap: 0.75rem;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 10px;
-  border: none;
+/* ======================
+   DESCRIPCIÓN / PRECIO
+====================== */
+.price-inline {
+  margin-top: 1rem;
   font-size: 1rem;
 }
 
-input, textarea {
-  background: #2a2a2a;
-  color: var(--text);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
-  background: var(--accent);
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.form-note {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-top: 0.5rem;
-}
-
-/* MODAL */
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal img {
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 8px;
-}
-
-/* ANIMACIONES */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,212,0,0.4); }
-  70% { box-shadow: 0 0 0 12px rgba(255,212,0,0); }
-  100% { box-shadow: 0 0 0 0 rgba(255,212,0,0); }
-}
-
-footer {
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-  padding-bottom: 2rem;
-}
 .price-inline span {
   color: var(--accent);
   font-size: 1.3rem;
   font-weight: 700;
 }
 
+/* ======================
+   SPEC SHEET
+====================== */
 .spec-grid {
   list-style: none;
   padding: 0;
@@ -209,6 +117,7 @@ footer {
   font-size: 0.95rem;
 }
 
+/* Precio destacado en ficha */
 .price-box {
   background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: white;
@@ -222,3 +131,132 @@ footer {
   font-size: 1.1rem;
 }
 
+/* ======================
+   GALERÍA
+====================== */
+.gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+}
+
+.gallery img {
+  height: 220px;
+  border-radius: 14px;
+  cursor: pointer;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ======================
+   FORMULARIO
+====================== */
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input,
+textarea {
+  background: #f9fafb;
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* ======================
+   MODAL IMÁGENES
+====================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+}
+
+/* ======================
+   ANIMACIONES
+====================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+
+/* ======================
+   RESPONSIVE EXTRA
+====================== */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .gallery img {
+    height: 260px;
+  }
+}
