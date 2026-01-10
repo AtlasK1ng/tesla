@@ -85,12 +85,18 @@
 
     <section class="card fade-in">
       <h2>Contacto</h2>
-      <form id="contactForm" action="https://formspree.io/f/mreezqwb" method="POST">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="text" name="contact" placeholder="Teléfono o email" required />
-        <textarea name="offer" placeholder="Mensaje u oferta (€)"></textarea>
+      <form action="https://formspree.io/f/mreezqwb" method="POST">
+        <input type="text" name="name" placeholder="Nombre" required>
+
+        <input type="email" name="_replyto" placeholder="Email" required>
+
+        <input type="text" name="phone" placeholder="Teléfono (opcional)">
+
+        <textarea name="message" placeholder="Mensaje u oferta (€)"></textarea>
+
         <button type="submit">Contactar</button>
       </form>
+
       <p class="form-note">Te responderé lo antes posible.</p>
     </section>
 
