@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Tesla Model 3 2019 Long Range AWD</title>
+  <title>Tesla Model 3 2019 Long Range AWD | 23.000€</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,17 +16,25 @@
   <header class="hero">
     <div class="badge-large" data-section="hero" data-value="badge">OPORTUNIDAD</div>
     <h1 data-section="hero" data-value="title">Tesla Model 3</h1>
-    <p class="hero-sub" data-section="hero" data-value="subtitle">Long Range AWD · 2019</p>
+    <p class="hero-sub" data-section="hero" data-value="subtitle">Long Range AWD · 2019 · Dual Motor</p>
   </header>
 
   <main class="container">
 
     <section class="card fade-in">
       <h2 data-section="description" data-value="title">Descripción</h2>
-      <p data-section="description" data-value="p1">Tesla Model 3 Long Range AWD (Dual Motor) del año 2019, en color azul metálico. Vehículo muy cuidado, con aproximadamente 140.000 km.</p>
+      <p data-section="description" data-value="p1">
+        Tesla Model 3 Long Range AWD (Dual Motor) del año 2019, en color azul. 
+        Vehículo muy cuidado, con aproximadamente <strong>140.000 km</strong> y en perfecto estado de funcionamiento.
+      </p>
+      <p data-section="description" data-value="p2">
+        Incluye prácticamente todos los extras disponibles en su configuración, 
+        destacando el <strong>sonido premium</strong> y el <strong>Full Self‑Driving (FSD)</strong>.
+      </p>
       <div class="price-tag">
         <strong data-section="description" data-value="priceText">Precio:</strong> 
         <span>23.000 €</span>
+        <p class="price-note" data-section="description" data-value="priceNote">Escucho ofertas razonables</p>
       </div>
     </section>
 
@@ -37,38 +45,40 @@
     </section>
 
     <section class="card fade-in">
-      <h2 data-section="gallery" data-value="title">Galería</h2>
+      <h2 data-section="gallery" data-value="title">Galería de fotos</h2>
       <div class="gallery">
-        <img src="img/tesla (14).jpg" alt="Tesla">
-        <img src="img/tesla (5).jpg" alt="Tesla">
-        <img src="img/tesla (6).jpg" alt="Tesla">
-        <img src="img/tesla (7).jpg" alt="Tesla">
-        <img src="img/tesla (9).jpg" alt="Tesla">
-        <img src="img/tesla (10).jpg" alt="Tesla">
-        <img src="img/tesla (11).jpg" alt="Tesla">
+        <img src="img/tesla (14).jpg" alt="Tesla Model 3 interior" />
+        <img src="img/tesla (5).jpg" alt="Tesla Model 3 azul exterior" />
+        <img src="img/tesla (6).jpg" alt="Tesla Model 3 interior" />
+        <img src="img/tesla (7).jpg" alt="Tesla Model 3 pantalla" />
+        <img src="img/tesla (9).jpg" alt="Tesla Model 3 azul exterior" />
+        <img src="img/tesla (10).jpg" alt="Tesla Model 3 interior" />
+        <img src="img/tesla (11).jpg" alt="Tesla Model 3 pantalla" />
       </div>
-      <p class="scroll-hint">← Desliza para ver más →</p>
+      <p class="scroll-hint">← Desliza las fotos para ver más →</p>
     </section>
 
     <section class="card fade-in">
       <h2 data-section="contact" data-value="title">Contacto</h2>
       <form action="https://formspree.io/f/mreezqwb" method="POST">
-        <input type="text" name="name" id="form-name" placeholder="Nombre" required>
-        <input type="email" name="_replyto" id="form-email" placeholder="Email" required>
-        <textarea name="message" id="form-msg" placeholder="Mensaje u oferta"></textarea>
-        <button type="submit" id="form-btn">Enviar</button>
+        <input type="text" name="name" id="form-name" placeholder="Tu Nombre" required>
+        <input type="email" name="_replyto" id="form-email" placeholder="Correo electrónico" required>
+        <input type="text" name="phone" id="form-phone" placeholder="Teléfono (opcional)">
+        <textarea name="message" id="form-msg" placeholder="Escribe aquí tu duda o propuesta económica..."></textarea>
+        <button type="submit" id="form-btn">Contactar ahora</button>
       </form>
+      <p class="form-note" data-section="contact" data-value="note">Te responderé lo antes posible.</p>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2026 · Tesla Model 3 Long Range</p>
+    <p>© 2026 · Venta Particular Tesla Model 3</p>
   </footer>
 
   <div class="modal" id="modal">
     <div class="close-modal">&times;</div>
-    <img id="modalImg" alt="Tesla" />
+    <img id="modalImg" alt="Imagen ampliada" />
   </div>
 
   <script src="script.js"></script>
